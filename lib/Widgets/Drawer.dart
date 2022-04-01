@@ -37,6 +37,10 @@ class MyDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(CupertinoIcons.bookmark_solid),
             title: Text("Save", style: TextStyle(fontSize: 20)),
+          ),
+          ListTile(
+            leading: Icon(CupertinoIcons.share_solid),
+            title: Text("share", style: TextStyle(fontSize: 20)),
           )
         ],
       ),

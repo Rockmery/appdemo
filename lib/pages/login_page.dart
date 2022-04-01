@@ -1,3 +1,4 @@
+import 'package:clone_practices/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class Loginpage extends StatelessWidget {
@@ -70,6 +71,9 @@ class Loginpage extends StatelessWidget {
                       onPressed: () {
                         var isFormValidated =
                             _formkey.currentState?.validate() ?? false;
+                        if (isFormValidated) {
+                          Navigator.pushNamed(context, MyRoutes.homeroutes);
+                        }
                       },
                     ),
                   ],

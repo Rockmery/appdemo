@@ -1,32 +1,29 @@
 import 'package:clone_practices/Widgets/Drawer.dart';
+import 'package:clone_practices/Widgets/items_widgets.dart';
+import 'package:clone_practices/models/catalog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
-  List No = List<String>.generate(100, (index) => "No.$index");
-
   @override
   Widget build(BuildContext context) {
     return Material(
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.lightBlue[300],
-          title: Center(child: Text("Groods")),
+          title: Center(
+              child: Text(
+            "Groods",
+          )),
         ),
         drawer: MyDrawer(),
-        body: Card(
+        body: Padding(
+          padding: const EdgeInsets.all(14.0),
           child: ListView.builder(
-            itemCount: No.length,
+            itemCount: CatalogModel.items.length,
             itemBuilder: (BuildContext context, int index) {
-              return Card(
-                color: Colors.lightBlue[100],
-                child: ListTile(
-                  leading: FlutterLogo(),
-                  title: Text(
-                    "No. $index",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ),
+              return Itemswidgets(
+                item: CatalogModel.items[index],
               );
             },
           ),

@@ -11,8 +11,11 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Roboto',
+      ),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.loginroutes,
+      initialRoute: MyRoutes.homeroutes,
       routes: {
         MyRoutes.homeroutes: (context) => Homepage(),
         MyRoutes.loginroutes: (context) => Loginpage(),

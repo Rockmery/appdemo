@@ -10,14 +10,14 @@ class Itemswidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0.0,
+      elevation: 0,
       child: ListTile(
         leading: Image.network(item.image),
         title: Text(item.name),
         subtitle: Text(item.description),
         trailing: Text(
           "\$${item.price}",
-          textScaleFactor: 1.2,
+          textScaleFactor: 1.1,
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
       ),

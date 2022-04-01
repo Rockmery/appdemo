@@ -12,7 +12,7 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        fontFamily: 'Roboto',
+        fontFamily: 'Roboto-Light.ttf',
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeroutes,

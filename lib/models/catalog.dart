@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CatalogModel {
-  static final items = [
+  static List<Item> items = [
     Item(
       id: 1,
       name: "iphone12 pro",
@@ -29,4 +29,22 @@ class Item {
       required this.price,
       required this.color,
       required this.image});
+
+  factory Item.fromMap(Map<String, dynamic> map) => Item(
+        id: map["id"],
+        name: map["name"],
+        description: map["description"],
+        price: map["price"],
+        color: map["color"],
+        image: map["image"],
+      );
+
+  toMap() => {
+        "id": id,
+        "name": name,
+        "description": description,
+        "price": price,
+        "color": color,
+        "image": image,
+      };
 }
